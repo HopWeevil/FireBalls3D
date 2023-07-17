@@ -1,0 +1,22 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2eafe3c3ba9cc574c93a721b914a7e2c, type: 3}
+  m_Name: TowerTemplate2
+  m_EditorClassIdentifier: 
+  _towerElement: {fileID: 642738642065823445, guid: 26564e6f6d34d0b43877e6c1381bae69, type: 3}
+  _additionalAngle: 0
+  _colors:
+  - {r: 0, g: 1, b: 0.42895603, a: 1}
+  - {r: 0.8962264, g: 0.38511837, b: 0.25703093, a: 1}
+  - {r: 0.750213, g: 0.35857955, b: 0.8018868, a: 1}
+  _scaleX: 0.2
+  _scaleZ: 0.2
