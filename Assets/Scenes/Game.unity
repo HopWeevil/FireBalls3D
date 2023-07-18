@@ -789,7 +789,6 @@ GameObject:
   - component: {fileID: 1284611216}
   - component: {fileID: 1284611218}
   - component: {fileID: 1284611217}
-  - component: {fileID: 1284611219}
   - component: {fileID: 1284611220}
   m_Layer: 0
   m_Name: Tower
@@ -841,19 +840,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _size: 56
   _towerTemplates:
-  - {fileID: 11400000, guid: 642d56100caad1843a8d11fed7b407db, type: 2}
---- !u!114 &1284611219
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1284611215}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 498e867019de25b4f8f9d1393407be85, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
+  - {fileID: 11400000, guid: d3d87c1fb884faf45b2adb265f3d866f, type: 2}
 --- !u!114 &1284611220
 MonoBehaviour:
   m_ObjectHideFlags: 0

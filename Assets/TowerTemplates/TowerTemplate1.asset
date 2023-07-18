@@ -12,9 +12,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2eafe3c3ba9cc574c93a721b914a7e2c, type: 3}
   m_Name: TowerTemplate1
   m_EditorClassIdentifier: 
-  _towerElement: {fileID: -7449747705856707299, guid: d27274c560c4f2e4cb5c79981608cb17, type: 3}
+  _towerElement: {fileID: 642738642065823445, guid: 26564e6f6d34d0b43877e6c1381bae69, type: 3}
   _additionalAngle: 5
-  _towerPattern:
+  _towerCreatorPattern:
   - _color: {r: 0.9372549, g: 0.78039217, b: 0.7607843, a: 1}
     _scaleX: 0
     _scaleZ: 0

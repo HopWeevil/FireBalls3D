@@ -5,10 +5,10 @@ public class TowerTemplate : ScriptableObject
 {
     [SerializeField] private TowerElement _towerElement;
     [SerializeField] private float _additionalAngle;
-    [SerializeField] private TowerPatten[] _towerPattern;
+    [SerializeField] private TowerCreatorPatten[] _towerCreatorPattern;
     
     public TowerElement TowerElement => _towerElement;
     public float AdditionalAngle => _additionalAngle;
-    public TowerPatten[] TowerPattern => _towerPattern;
+    public TowerCreatorPatten[] TowerCreatorPattern => _towerCreatorPattern;
   
 }

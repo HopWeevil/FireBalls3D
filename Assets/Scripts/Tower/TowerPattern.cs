@@ -1,7 +1,7 @@
 using UnityEngine;
 
 [System.Serializable]
-public class TowerPatten
+public class TowerCreatorPatten
 {
     [SerializeField] private Color _color;
     [SerializeField] private float _scaleX;

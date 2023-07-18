@@ -14,7 +14,7 @@ public class TowerElement : MonoBehaviour
         meshRenderer.material.color = color;
     }
 
-    public void ApplyScaleModifier(TowerPatten towerStage)
+    public void ApplyScaleModifier(TowerCreatorPatten towerStage)
     {
         transform.localScale = transform.localScale + new Vector3(towerStage.ScaleX, 0, towerStage.ScaleZ);
     }

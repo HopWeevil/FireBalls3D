@@ -8,9 +8,9 @@ public class TowerCreator : MonoBehaviour
     [SerializeField] private float _elementSpacing;
 
     private TowerTemplate _towerTemplate;
-    private int _currentPatternIndex;
     private Transform _currentBuildPoint;
-    private int _currentTowerSize;
+    private int _currentPatternIndex;
+    private float _currentAngle;
 
     public float ElementSpacing => _elementSpacing;
 
@@ -21,12 +21,12 @@ public class TowerCreator : MonoBehaviour
 
         for (int i = 0; i < towerSize; i++)
         {
-            TowerPatten towerPattern = GetPattern();
+            TowerCreatorPatten towerPattern = GetPattern();
             TowerElement towerElement = BuildTowerElement();
             towerElement.ApplyScaleModifier(towerPattern);
             towerElement.SetColor(towerPattern.Color);
             _currentBuildPoint = towerElement.transform;
-            _currentTowerSize++;
+            _currentAngle += _towerTemplate.AdditionalAngle;
         }
     }
 
@@ -42,19 +42,13 @@ public class TowerCreator : MonoBehaviour
 
     private Quaternion GetElementRotation()
     {
-        return Quaternion.Euler(new Vector2(0, _currentTowerSize * _towerTemplate.AdditionalAngle));
+        return Quaternion.Euler(new Vector2(0, _currentAngle));
     }
 
-    private TowerPatten GetPattern()
+    private TowerCreatorPatten GetPattern()
     {
-        TowerPatten patten = _towerTemplate.TowerPattern[_currentPatternIndex];
-        _currentPatternIndex++;
-
-        if (_currentPatternIndex >= _towerTemplate.TowerPattern.Length)
-        {
-            _currentPatternIndex = 0;
-        }
-
+        TowerCreatorPatten patten = _towerTemplate.TowerCreatorPattern[_currentPatternIndex];
+        _currentPatternIndex = (_currentPatternIndex + 1) % _towerTemplate.TowerCreatorPattern.Length;
         return patten;
     }
 }
