@@ -5,6 +5,8 @@ using UnityEngine;
 public class Projectile : MonoBehaviour
 {
     [SerializeField] private float _bulletSpeed;
+    [SerializeField] private float _bounceForce;
+    [SerializeField] private float _bounceRadius;
     private Vector3 _moveDirection;
 
     private void Start()
@@ -23,7 +25,20 @@ public class Projectile : MonoBehaviour
         {
             towerElement.GetComponentInParent<Tower>().DecreaseSize();
             towerElement.Break();
+            Destroy(gameObject);
         }
-        Destroy(gameObject);
+
+        if(other.TryGetComponent(out Obstacle obstacle))
+        {
+            Bounce();
+        }
+    }
+
+    private void Bounce()
+    {
+        _moveDirection = Vector3.back + Vector3.up;
+        Rigidbody rigidbody = GetComponent<Rigidbody>();
+        rigidbody.isKinematic = false;
+        rigidbody.AddExplosionForce(_bounceForce, transform.position + new Vector3(0, -1, 1), _bounceRadius);
     }
 }

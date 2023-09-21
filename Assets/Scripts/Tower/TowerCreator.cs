@@ -47,8 +47,8 @@ public class TowerCreator : MonoBehaviour
 
     private TowerCreatorPatten GetPattern()
     {
-        TowerCreatorPatten patten = _towerTemplate.TowerCreatorPattern[_currentPatternIndex];
+        TowerCreatorPatten pattern = _towerTemplate.TowerCreatorPattern[_currentPatternIndex];
         _currentPatternIndex = (_currentPatternIndex + 1) % _towerTemplate.TowerCreatorPattern.Length;
-        return patten;
+        return pattern;
     }
 }
