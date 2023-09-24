@@ -1,5 +1,6 @@
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 
 [RequireComponent(typeof(TowerCreator))]
 [RequireComponent(typeof(TowerRotator))]
@@ -12,6 +13,8 @@ public class Tower : MonoBehaviour
     private TowerCreator _towerCreator;
     private TowerRotator _towerRotator;
     private int _currentSize;
+
+    public event UnityAction<int> SizeUpdated;
 
     private void Update()
     {
@@ -30,12 +33,14 @@ public class Tower : MonoBehaviour
     {
         _towerTemplate = _towerTemplates[Random.Range(0, _towerTemplates.Length)];
         _towerCreator.Build(_size, _towerTemplate);
+        SizeUpdated?.Invoke(_currentSize);
     }
 
     public void DecreaseSize()
     {
         _currentSize--;
         MoveDown();
+        SizeUpdated?.Invoke(_currentSize);
     }
 
     private void MoveDown()
