@@ -146,7 +146,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 711b01671416a7e449b55c5909cb50ed, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _bulletSpeed: 10
+  _flySpeed: 10
   _bounceForce: 100
   _bounceRadius: 100
-  _lifeTime: 10

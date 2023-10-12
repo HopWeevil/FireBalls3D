@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Projectile : MonoBehaviour
 {
-    [SerializeField] private float _bulletSpeed;
+    [SerializeField] private float _flySpeed;
     [SerializeField] private float _bounceForce;
     [SerializeField] private float _bounceRadius;
     private Vector3 _moveDirection;
@@ -16,7 +16,7 @@ public class Projectile : MonoBehaviour
 
     private void Update()
     {
-        transform.Translate(_moveDirection * _bulletSpeed * Time.deltaTime);
+        transform.Translate(_moveDirection * _flySpeed * Time.deltaTime);
     }
 
     private void OnTriggerEnter(Collider other)
