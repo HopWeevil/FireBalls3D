@@ -1,8 +1,11 @@
 # Прототип гри FireBalls3D
 
-https://github.com/HopWeevil/FireBalls3D/assets/122750132/a10df238-b756-4f53-a45b-4327cc320086
 
 
 
-https://github.com/HopWeevil/FireBalls3D/assets/122750132/cd8f3d7b-bf7f-409c-b51e-c9230a32666f
+https://github.com/HopWeevil/FireBalls3D/assets/122750132/036b942e-a38d-4306-b3c4-080d4cfdcf06
+
+
+
+https://github.com/HopWeevil/FireBalls3D/assets/122750132/abcd3a39-9107-4fe8-8d86-0158fd64131f
 
