@@ -6,7 +6,7 @@ using UnityEngine.Events;
 [RequireComponent(typeof(TowerRotator))]
 public class Tower : MonoBehaviour
 {
-    [SerializeField] private int _size;
+    [SerializeField] private Vector2Int _sizeRange;
     [SerializeField] private TowerTemplate[] _towerTemplates;
 
     private TowerTemplate _towerTemplate;
@@ -23,7 +23,6 @@ public class Tower : MonoBehaviour
 
     private void Start()
     {
-        _currentSize = _size;
         _towerCreator = GetComponent<TowerCreator>();
         _towerRotator = GetComponent<TowerRotator>();
         Initialize(); 
@@ -31,8 +30,9 @@ public class Tower : MonoBehaviour
 
     private void Initialize()
     {
+        _currentSize = Random.Range(_sizeRange.x, _sizeRange.y);
         _towerTemplate = _towerTemplates[Random.Range(0, _towerTemplates.Length)];
-        _towerCreator.Build(_size, _towerTemplate);
+        _towerCreator.Build(_currentSize, _towerTemplate);
         SizeUpdated?.Invoke(_currentSize);
     }
 

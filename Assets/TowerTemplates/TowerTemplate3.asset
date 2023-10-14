@@ -15,7 +15,7 @@ MonoBehaviour:
   _towerElement: {fileID: -8516322508347353098, guid: 865f23b602ec4e745b18786d2f503771, type: 3}
   _additionalAngle: 25
   _towerCreatorPattern:
-  - _color: {r: 0.80784315, g: 0.7254902, b: 0.57254905, a: 1}
+  - _color: {r: 0.7529412, g: 0.34117648, b: 0.27450982, a: 1}
     _scaleX: 0
     _scaleZ: 0
   - _color: {r: 0.4509804, g: 0.5764706, b: 0.49411765, a: 1}
