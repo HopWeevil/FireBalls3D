@@ -964,6 +964,7 @@ MonoBehaviour:
   _towerTemplates:
   - {fileID: 11400000, guid: d3d87c1fb884faf45b2adb265f3d866f, type: 2}
   - {fileID: 11400000, guid: 642d56100caad1843a8d11fed7b407db, type: 2}
+  - {fileID: 11400000, guid: aed5fc7573f6838498e39e8ab905518f, type: 2}
 --- !u!114 &1284611220
 MonoBehaviour:
   m_ObjectHideFlags: 0

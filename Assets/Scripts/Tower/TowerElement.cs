@@ -6,7 +6,9 @@ using UnityEngine.Events;
 [RequireComponent(typeof(MeshRenderer))]
 public class TowerElement : MonoBehaviour
 {
-    [SerializeField] private MeshRenderer _meshRenderer; 
+    [SerializeField] private MeshRenderer _meshRenderer;
+    [SerializeField] private MeshFilter _meshFilter;
+    [SerializeField] private BreakEffect _breakEffect;
     public Vector3 MeshBounds => _meshRenderer.bounds.size;
 
     public void SetColor(Color color)
@@ -21,6 +23,7 @@ public class TowerElement : MonoBehaviour
 
     public void Break()
     {
+        Instantiate(_breakEffect).Play(transform, _meshRenderer.material.color, _meshFilter.sharedMesh);
         Destroy(gameObject);
     }
 }
